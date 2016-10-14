@@ -1004,6 +1004,8 @@ def get_flac_converter():
             flac_converter = os.path.join(path, "flac-linux-x86")
         elif system == "Darwin" and platform.machine() in compatible_machine_types:
             flac_converter = os.path.join(path, "flac-mac")
+        elif system == "Linux" and platform.machine() == "mips":
+            flac_converter = os.path.join(path, "flac-linux-mips")
         else:
             raise OSError("FLAC conversion utility not available - consider installing the FLAC command line application using `brew install flac` or your operating system's equivalent")
 

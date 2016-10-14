@@ -12,7 +12,7 @@ if sys.version_info < (2, 6):
     print("THIS MODULE REQUIRES PYTHON 2.6, 2.7, OR 3.3+. YOU ARE CURRENTLY USING PYTHON {0}".format(sys.version))
     sys.exit(1)
 
-FILES_TO_MARK_EXECUTABLE = ["flac-linux-i386", "flac-mac", "flac-win32.exe"]
+FILES_TO_MARK_EXECUTABLE = ["flac-linux-i386", "flac-mac", "flac-win32.exe", "flac-linux-mips"]
 class InstallWithExtraSteps(install):
     def run(self):
         install.run(self) # do the original install steps
